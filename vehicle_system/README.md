@@ -101,8 +101,5 @@ python manage.py check
 Recording link: https://drive.google.com/file/d/1mhi_dDJTT8ma_xYlC8QHvldQkxqmpi_e/view?usp=drive_link
 ## 12. Live Deployment
 
-Live API URL: Add your deployed API URL here.
+Live API URL: 
 
-## 13. Author
-
-Add your name here.
