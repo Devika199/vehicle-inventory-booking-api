@@ -20,12 +20,13 @@ class VehicleAPI(APIView):
         brand = request.query_params.get('brand')
         fuel_type = request.query_params.get('fuel_type')
         is_available = request.query_params.get('is_available')
-
         if brand:
             vehicles = vehicles.filter(brand__iexact=brand)
 
         if fuel_type:
             vehicles = vehicles.filter(fuel_type=fuel_type)
+        
+       
 
         if is_available is not None:
             if is_available.lower() not in ['true', 'false']:
@@ -140,13 +141,13 @@ class BookingAPI(APIView):
         booking = serializer.save(total_amount=total_amount)
 
         vehicle.is_available = False
-        vehicle.save(update_fields=['is_available'])
+        vehicle.save()
 
         return Response(
             BookingSerializer(booking).data,
             status=status.HTTP_201_CREATED
         )
-
+    
 
 class BookingDetailAPI(APIView):
 
@@ -157,3 +158,7 @@ class BookingDetailAPI(APIView):
         )
         serializer = BookingSerializer(booking)
         return Response(serializer.data)
+    
+    
+
+

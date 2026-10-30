@@ -7,8 +7,8 @@ class VehicleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vehicle
         fields = '__all__'
-
-
+    
+   
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
@@ -39,3 +39,4 @@ class BookingSerializer(serializers.ModelSerializer):
             })
 
         return data
+

@@ -16,3 +16,8 @@ urlpatterns = [
     path('bookings/<int:pk>/', BookingDetailAPI.as_view(),
          name='booking-detail'),
 ]
+
+
+        
+
+
